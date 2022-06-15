@@ -1,0 +1,70 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: RootQueryType
+}
+
+type Album {
+    id: Int
+    title: String
+    user: User
+    userId: Int
+}
+
+type Comment {
+    body: String
+    email: String
+    id: Int
+    name: String
+    post: Post
+    postId: Int
+}
+
+type Photo {
+    album: Album
+    albumId: Int
+    id: Int
+    thumbnailUrl: String
+    title: String
+    url: String
+}
+
+type Post {
+    body: String
+    id: Int
+    title: String
+    user: User
+    userId: Int
+}
+
+type RootQueryType {
+    album(id: Int): Album
+    albums(userId: Int): [Album]
+    comment(id: Int): Comment
+    comments(postId: Int): [Comment]
+    photo(id: Int): Photo
+    photos(albumId: Int): [Photo]
+    post(id: Int): Post
+    posts(userId: Int): [Post]
+    todo(id: Int): Todo
+    todos(completed: Boolean, userId: Int): [Todo]
+    user(id: Int): User
+    users: [User]
+}
+
+type Todo {
+    completed: Boolean
+    id: Int
+    title: String
+    user: User
+    userId: Int
+}
+
+type User {
+    email: String
+    id: Int
+    name: String
+    phone: String
+    username: String
+    website: String
+}
