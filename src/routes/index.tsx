@@ -6,7 +6,8 @@ import {
 
 import {
   Login,
-  Users,
+  Rockets,
+  Rocket,
   Error404,
 } from './routes';
 
@@ -15,7 +16,8 @@ const Pages = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/rocket/:rocketId" element={<Rocket />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>

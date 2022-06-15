@@ -1,0 +1,29 @@
+query rockets($limit: Int) {
+  rockets(limit: $limit) {
+    id
+    name
+    height {
+      meters
+    }
+    mass {
+      kg
+    }
+    wikipedia
+    company
+    country
+  }
+}
+
+query rocket($id: ID!) {
+  rocket(id: $id ) {
+    id
+    name
+    company
+    mass {
+      kg
+    }
+    height {
+      meters
+    }
+  }
+}
